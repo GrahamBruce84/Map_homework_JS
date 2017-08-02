@@ -6,10 +6,11 @@ var MapWrapper = function(container, center, zoom){
   this.markers = [];
 }
 
-MapWrapper.prototype.addMarker = function(coords){
+MapWrapper.prototype.addMarker = function(coords, image){
   var marker = new google.maps.Marker({
     position: coords,
-    map: this.googleMap
+    map: this.googleMap,
+    icon: image
   });
   this.markers.push(marker);
   marker.addListener('click', function(event) {
@@ -39,6 +40,7 @@ MapWrapper.prototype.addMarker = function(coords){
   };
 
   MapWrapper.prototype.goToCockburn = function() {
+    var image = "http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/48/Avengers-Captain-America-icon.png"
     var coords = {
         lat: -32.07842925877362,
         lng: 140.99570274353027
@@ -47,7 +49,7 @@ MapWrapper.prototype.addMarker = function(coords){
     this.googleMap.setCenter(coords);
   };
 
-  
+
 
 
 

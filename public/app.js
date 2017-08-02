@@ -13,9 +13,7 @@ var initialise = function(){
 
   var cockBurnButton = document.querySelector("#cockBurn-button");
   cockBurnButton.addEventListener("click", mainMap.goToCockburn.bind(mainMap));
-
-  var myLocButton = document.querySelector("#myLoc-button");
-  myLocButton.addEventListener("click", mainMap.findMyLocation.bind(mainMap));
+  
 };
 
 window.addEventListener("load", initialise);
