@@ -45,7 +45,7 @@ MapWrapper.prototype.addMarker = function(coords, image){
         lat: -32.07842925877362,
         lng: 140.99570274353027
     }
-    this.addMarker(coords);
+    this.addMarker(coords, image);
     this.googleMap.setCenter(coords);
   };
 
